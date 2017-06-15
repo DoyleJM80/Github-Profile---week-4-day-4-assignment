@@ -22,6 +22,7 @@
       var name = document.createElement('h2');
       var bio = document.createElement('p');
       avatar.innerHTML = '<img src="' + data.avatar_url + '">';
+      avatar.classList.add('image');
       location.textContent = data.location;
       login.textContent = data.login;
       email.textContent = data.email;
@@ -48,15 +49,21 @@
   });
   function displayRepo(repo) {
     var repoDiv = document.createElement('div');
-    var repoName = document.createElement('div');
+    var repoCont = document.createElement('div');
+    var circle = document.createElement('div');
+    var repoName = document.createElement('a');
     var language = document.createElement('span');
     var updated = document.createElement('span');
+    circle.classList.add('circle');
     repoDiv.classList.add('repo-div');
     updated.textContent = moment(repo.updated_at).fromNow();
     repoName.textContent = repo.name;
+    repoName.href = repo.html_url;
     language.textContent = repo.language;
     repoNode.appendChild(repoDiv);
-    repoDiv.appendChild(repoName);
+    repoDiv.appendChild(repoCont);
+    repoCont.appendChild(repoName);
+    repoDiv.appendChild(circle);
     repoDiv.appendChild(language);
     repoDiv.appendChild(updated);
   }
