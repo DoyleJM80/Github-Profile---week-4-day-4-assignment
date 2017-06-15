@@ -1,0 +1,15 @@
+.repo-div {
+  color: #0366d6;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+span {
+  color: #586069;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+}
