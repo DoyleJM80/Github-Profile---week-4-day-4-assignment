@@ -56,9 +56,10 @@
     var updated = document.createElement('span');
     circle.classList.add('circle');
     repoDiv.classList.add('repo-div');
-    updated.textContent = moment(repo.updated_at).fromNow();
+    updated.textContent = 'Updated ' + moment(repo.updated_at).fromNow();
     repoName.textContent = repo.name;
     repoName.href = repo.html_url;
+    repoName.classList.add('repo-title');
     language.textContent = repo.language;
     repoNode.appendChild(repoDiv);
     repoDiv.appendChild(repoCont);
@@ -66,5 +67,10 @@
     repoDiv.appendChild(circle);
     repoDiv.appendChild(language);
     repoDiv.appendChild(updated);
+    if (repo.language === 'JavaScript') {
+      circle.style.backgroundColor = '#f1e05a';
+    } else if (repo.language === 'CSS') {
+      circle.style.backgroundColor = '#563d7c';
+    }
   }
 }());
