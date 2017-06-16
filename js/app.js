@@ -7,6 +7,7 @@
   var reposUrl = 'https://api.github.com/users/TheDoyles922/repos?sort=updated';
   var profileNode = document.getElementById('profile');
   var repoNode = document.getElementById('repos');
+  var repoTotal = document.getElementById('repo-total');
   if (TOKEN) {
       // set the AJAX header to send the token
       myHeaders.Authorization = 'token ' + TOKEN;
@@ -41,6 +42,7 @@
   fetch(reposUrl, {headers: myHeaders}).then(function(response){
     response.json().then(function (data2) {
       console.log(data2);
+      repoTotal.innerHTML = data2.length;
       for (var i = 0; i < data2.length; i++) {
         var newData = data2[i];
         displayRepo(newData);
@@ -56,6 +58,9 @@
     var updated = document.createElement('span');
     circle.classList.add('circle');
     repoDiv.classList.add('repo-div');
+    language.classList.add('repo-span');
+    updated.classList.add('repo-span');
+    repoCont.classList.add('repo-cont');
     updated.textContent = 'Updated ' + moment(repo.updated_at).fromNow();
     repoName.textContent = repo.name;
     repoName.href = repo.html_url;
