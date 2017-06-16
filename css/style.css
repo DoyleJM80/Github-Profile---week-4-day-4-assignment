@@ -241,7 +241,7 @@ footer {
   margin: 0 8px;
 }
 
-#orgs {
-  height: 50px;
-
+.org-image img {
+  height: 35px;
+  width: 35px;
 }
