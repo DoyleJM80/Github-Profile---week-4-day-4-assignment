@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css” integrity=“sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u” crossorigin=“anonymous”>
     <link rel="stylesheet" href="css/style.css">
     <title></title>
   </head>
@@ -10,17 +13,26 @@
     <header>
 
       <ul>
-        <li class="link"><input class="header-input" type="text" name="input" value="" placeholder="Search GitHub"></li>
-        <li class="link"><span><a href="https://github.com/pulls" class="link">Pull Requests</a></span></li>
+        <a href="https://github.com/"><img src="images/icon.png" alt="github icon" class="icon"></a>
+        <li class="link"><input class="header-input" type="text" name="input" value="" placeholder="  Search GitHub"></li>
+        <li class="link"><span><a href="https://github.com/pulls" class="link">Pull requests</a></span></li>
         <li class="link"><span><a href="https://github.com/issues" class="link">Issues</a></span></li>
         <li class="link"><span><a href="https://github.com/marketplace" class="link">Marketplace</a></span></li>
         <li class="link"><span><a href="https://gist.github.com/" class="link">Gist</a></span></li>
       </ul>
     </header>
     <div class="container">
-      <div class="col-2" id="profile">
+      <div class="col-2">
+        <div class="col-2" id="profile">
 
+
+        </div>
+        <div id="orgs">
+          
+
+        </div>
       </div>
+
       <div class="col-10" id="repos">
         <div class="repo-menu">
           <span class="menu-buttons">Overview</span>
@@ -30,27 +42,46 @@
           <span class="menu-buttons">Following<div class="tracker-circle">0</div></span>
         </div>
         <div class="repo-options">
-          <input class="repo-options-input" type="text" name="" value="">
-          <select class="" name="">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+          <input class="repo-options-input" type="text">
+          <select>
+            <optgroup label="type">
+              <option>Type: All</option>
+              <option>Public</option>
+              <option>Private</option>
+              <option>Sources</option>
+              <option>Forks</option>
+              <option>Mirrors</option>
+            </optgroup>
+
           </select>
-          <select class="" name="">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+          <select>
+            <option>Language: All</option>
+            <option>CSS</option>
+            <option>HTML</option>
+            <option>JavaScript</option>
           </select>
+          <button type="button" name="button" class="new-button"><span><img src="images/book.png" alt="book icon" class="book-img"></span>New</button>
         </div>
 
       </div>
     </div>
-
+<!-- Contact GitHub API Training Shop Blog About-->
     <footer>
+      <div class="footer-container">
+        <span>© 2017 GitHub, Inc.</span>
+        <span><a href="#">Terms</a></span>
+        <span><a href="#">Privacy</a></span>
+        <span><a href="#">Security</a></span>
+        <span><a href="#">Status</a></span>
+        <span><a href="#">Help</a></span>
+        <span><a href="#"><img src="images/icon-alternate.png" alt="github icon" class="img-alternate"></a></span>
+        <span><a href="#">Contact GitHub</a></span>
+        <span><a href="#">API</a></span>
+        <span><a href="#">Training</a></span>
+        <span><a href="#">Shop</a></span>
+        <span><a href="#">Blog</a></span>
+        <span><a href="#">About</a></span>
+      </div>
 
     </footer>
     <script src="js/moment.js" charset="utf-8"></script>
