@@ -81,10 +81,12 @@
       var orgTitle = document.createElement('h4');
       orgTitle.textContent = 'Organizations';
       orgSection.appendChild(orgTitle);
-      data3.forEach(function(){
+      data3.forEach(function(item){
+
+        console.log('item', item);
         var orgImgNode = document.createElement('span');
         orgImgNode.setAttribute('class', 'org-image');
-        var orgImg = '<img src="' + data3[0].avatar_url + '">';
+        var orgImg = '<img src="' + item.avatar_url + '">';
         orgImgNode.innerHTML = orgImg;
         orgSection.appendChild(orgImgNode);
 
